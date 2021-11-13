@@ -7,8 +7,8 @@ namespace ProyectoSegundaEtapa
     {
         static void Main(string[] args)
         {
-            int num;
-
+            int num, num2;
+            
             Console.WriteLine("----BIENVENIDO A SPRITH INDUSTRRY'S----\n");
 
             Console.WriteLine("Ingrese 1 si es nuevo usuario o ingrese 2 si ya posee una cuenta ");
@@ -33,10 +33,39 @@ namespace ProyectoSegundaEtapa
                     string Username= IngresoUsuario_name();
                     string Contra = IngresoUsuario_contra();
                     //nuevoUsuario1.UsuarioNombre(User);
-
-
                     Console.WriteLine();
-                    break;
+                    //
+                    Console.WriteLine("Si desea revisar el inventario presione 1, caso contrario presione cualquier otra tecla");
+                    num2 = int.Parse(Console.ReadLine());
+                    if (num2 == 1)
+                    {
+                        //CREACIÓN DE LA LISTA CON LOS MODELOS DE CELULARES Y PRECIOS
+                        Celulares iphone = new Celulares();
+                        iphone.ModeloCelular = "Iphone 6s";
+                        iphone.Precio = 650;
+                        iphone.Cantidad = 30;
+                        Celulares samsung = new Celulares();
+                        samsung.ModeloCelular = "Samsung Galaxy Note";
+                        samsung.Precio = 800;
+                        Celulares motorola = new Celulares();
+                        motorola.ModeloCelular = "Motorola G2";
+                        motorola.Precio = 260;
+                        motorola.Cantidad = 20;
+                        Celulares xiaomi = new Celulares();
+                        xiaomi.ModeloCelular = "Xiaomi Note 10";
+                        xiaomi.Precio = 950;
+                        List<Celulares> ListaCelulares = new List<Celulares>();
+                        ListaCelulares.Add(iphone);
+                        ListaCelulares.Add(samsung);
+                        ListaCelulares.Add(xiaomi);
+                        ListaCelulares.Add(motorola);
+                        //IMPRESION DE LA LISTA DE CELULARES QUE TIENEN HERENCIA DE INVENTARIO
+                        foreach (Celulares item in ListaCelulares)
+                        {
+                            Console.WriteLine(item.ModeloCelular + "\n" + "Con un valor de:" + item.Precio + "\n" + "Hay un catidad de:" + item.Cantidad + " telefonos");
+                        }
+                    }
+                        break;
                 default:
 
                     break;
@@ -119,9 +148,11 @@ namespace ProyectoSegundaEtapa
                 Celulares iphone = new Celulares();
                 iphone.ModeloCelular = "Iphone 6s";
                 iphone.Precio = 650;
+                iphone.Cantidad= 30;
                 Celulares samsung = new Celulares();
                 samsung.ModeloCelular = "Samsung Galaxy Note";
                 samsung.Precio = 800;
+                
                 Celulares xiaomi = new Celulares();
                 xiaomi.ModeloCelular = "Xiaomi Note 10";
                 xiaomi.Precio = 950;
@@ -132,7 +163,7 @@ namespace ProyectoSegundaEtapa
                 //IMPRESION DE LA LISTA DE CELULARES QUE TIENEN HERENCIA DE INVENTARIO
                 foreach (Celulares item in ListaCelulares)
                 {
-                    Console.WriteLine(item.ModeloCelular+"\n"+ "Con un valor de:"+item.Precio);
+                    Console.WriteLine(item.ModeloCelular+"\n"+ "Con un valor de:"+item.Precio+"\n"+ "Hay un catidad de:" +item.Cantidad+" telefonos");
                 }
 
             }*/
