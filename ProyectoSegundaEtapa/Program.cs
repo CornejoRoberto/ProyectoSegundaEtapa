@@ -17,7 +17,7 @@ namespace ProyectoSegundaEtapa
             num = int.Parse(Console.ReadLine());
             if (num == 1)
             {
-                //Creamos nuestra lista
+                //CREACIÓN DE LA LISTA CON LOS MODELOS DE CELULARES Y PRECIOS
                 Celulares iphone = new Celulares();
                 iphone.ModeloCelular = "Iphone 6s";
                 iphone.Precio = 650;
@@ -31,6 +31,7 @@ namespace ProyectoSegundaEtapa
                 ListaCelulares.Add(iphone);
                 ListaCelulares.Add(samsung);
                 ListaCelulares.Add(xiaomi);
+                //IMPRESION DE LA LISTA DE CELULARES QUE TIENEN HERENCIA DE INVENTARIO
                 foreach (Celulares item in ListaCelulares)
                 {
                     Console.WriteLine(item.ModeloCelular+"\n"+ "Con un valor de:"+item.Precio);
