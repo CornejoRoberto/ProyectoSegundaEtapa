@@ -6,10 +6,9 @@ namespace ProyectoSegundaEtapa
 {
     class Inventario
     {
-        // 3 CATEGORIAS DEL INVENTARIO
-        public String Portables { get; set; }
-        public String Camaras { get; set; }
-        public String Televisores { get; set; }
+        // 3 CATEGORIAS DEL INVENTARIO QUE SERAN HEREDADAS A LAS 3 CATEGORIAS DEL INVENTARIO
+        public int Precio { get; set; }
+        public int Cantidad { get; set; }
         public Inventario()
         {
 

@@ -35,7 +35,10 @@ namespace ProyectoSegundaEtapa
                     //nuevoUsuario1.UsuarioNombre(User);
                     Console.WriteLine();
                     //
-                    Console.WriteLine("Si desea revisar el inventario presione 1, caso contrario presione cualquier otra tecla");
+                    Console.WriteLine("Bienvenido al inventario, seleccione que categoria desea visualizar");
+                    Console.WriteLine("1.Celulares");
+                    Console.WriteLine("2.Camaras");
+                    Console.WriteLine("3.Televisores");
                     num2 = int.Parse(Console.ReadLine());
                     if (num2 == 1)
                     {
@@ -47,6 +50,7 @@ namespace ProyectoSegundaEtapa
                         Celulares samsung = new Celulares();
                         samsung.ModeloCelular = "Samsung Galaxy Note";
                         samsung.Precio = 800;
+                        samsung.Cantidad = 350;
                         Celulares motorola = new Celulares();
                         motorola.ModeloCelular = "Motorola G2";
                         motorola.Precio = 260;
@@ -54,20 +58,65 @@ namespace ProyectoSegundaEtapa
                         Celulares xiaomi = new Celulares();
                         xiaomi.ModeloCelular = "Xiaomi Note 10";
                         xiaomi.Precio = 950;
+                        xiaomi.Cantidad = 45;
                         List<Celulares> ListaCelulares = new List<Celulares>();
                         ListaCelulares.Add(iphone);
                         ListaCelulares.Add(samsung);
                         ListaCelulares.Add(xiaomi);
                         ListaCelulares.Add(motorola);
                         //IMPRESION DE LA LISTA DE CELULARES QUE TIENEN HERENCIA DE INVENTARIO
+                        Console.WriteLine("MODELOS DE CELULARES");
                         foreach (Celulares item in ListaCelulares)
                         {
                             Console.WriteLine(item.ModeloCelular + "\n" + "Con un valor de:" + item.Precio + "\n" + "Hay un catidad de:" + item.Cantidad + " telefonos");
                         }
                     }
-                        break;
-                default:
+                    else if (num2 == 2)
+                    {
+                        Camaras nikon = new Camaras();
+                        nikon.ModeloCamara = "Nikon D3500";
+                        nikon.Precio = 840;
+                        nikon.Cantidad = 40;
+                        Camaras canon = new Camaras();
+                        canon.ModeloCamara = "Canon M50";
+                        canon.Precio = 950;
+                        canon.Cantidad = 30;
+                        List<Camaras> ListaCamaras = new List<Camaras>();
+                        ListaCamaras.Add(nikon);
+                        ListaCamaras.Add(canon);
+                        Console.WriteLine("MODELOS DE CAMARAS");
+                        foreach (Camaras item in ListaCamaras)
+                        {
+                            Console.WriteLine(item.ModeloCamara + "\n" + "Con un valor de:" + item.Precio + "\n" + "Hay un catidad de:" + item.Cantidad + " camaras");
+                        }
+                    }
+                    else if (num2 == 3)
+                    {
+                        Televisores lg = new Televisores();
+                        lg.ModeloTelevisores = "LG OLED Z1";
+                        lg.Precio = 965;
+                        lg.Cantidad = 65;
+                        Televisores panasonic = new Televisores();
+                        panasonic.ModeloTelevisores = "Panasonic Tx-58Gx700E";
+                        panasonic.Precio = 890;
+                        panasonic.Cantidad = 80;
+                        Televisores tcl = new Televisores();
+                        tcl.ModeloTelevisores = "TCL 42S6500";
+                        tcl.Precio = 599;
+                        tcl.Cantidad = 78;
+                        List<Televisores> ListaTelevisores = new List<Televisores>();
+                        ListaTelevisores.Add(lg);
+                        ListaTelevisores.Add(panasonic);
+                        ListaTelevisores.Add(tcl);
+                        Console.WriteLine("MODELOS DE TELEVISORES");
+                        foreach (Televisores item in ListaTelevisores)
+                        {
+                            Console.WriteLine(item.ModeloTelevisores + "\n" + "Con un valor de:" + item.Precio + "\n" + "Hay un catidad de:" + item.Cantidad + " televisores");
+                        }
+                    }
 
+                    break;
+                default:
                     break;
 
             }
