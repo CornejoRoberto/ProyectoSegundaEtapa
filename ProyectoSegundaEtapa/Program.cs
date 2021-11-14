@@ -39,36 +39,104 @@ namespace ProyectoSegundaEtapa
                     Console.WriteLine("1.Celulares");
                     Console.WriteLine("2.Camaras");
                     Console.WriteLine("3.Televisores");
+                    Console.WriteLine("otro numero salir.");
                     num2 = int.Parse(Console.ReadLine());
                     if (num2 == 1)
                     {
                         //CREACIÓN DE LA LISTA CON LOS MODELOS DE CELULARES Y PRECIOS
                         Celulares iphone = new Celulares();
                         iphone.ModeloCelular = "Iphone 6s";
-                        iphone.Precio = 650;
+                        iphone.Precio = 250;
                         iphone.Cantidad = 30;
+
+                        iphone.ModeloCelular = "Iphone 7";
+                        iphone.Precio = 300;
+                        iphone.Cantidad = 23;
+
+                        iphone.ModeloCelular = "Iphone 8";
+                        iphone.Precio = 389;
+                        iphone.Cantidad = 10;
+
+                        iphone.ModeloCelular = "Iphone 8 plus";
+                        iphone.Precio = 420;
+                        iphone.Cantidad = 25;
+
+                        iphone.ModeloCelular = "Iphone X";
+                        iphone.Precio = 475;
+                        iphone.Cantidad = 53;
+
                         Celulares samsung = new Celulares();
-                        samsung.ModeloCelular = "Samsung Galaxy Note";
-                        samsung.Precio = 800;
-                        samsung.Cantidad = 350;
+                        samsung.ModeloCelular = "Samsung Galaxy Note8";
+                        samsung.Precio = 500;
+                        samsung.Cantidad = 32;
+
+                        samsung.ModeloCelular = "Samsung Galaxy Note 9";
+                        samsung.Precio = 670;
+                        samsung.Cantidad = 12;
+
+                        samsung.ModeloCelular = "Samsung Galaxy Note 10";
+                        samsung.Precio = 700;
+                        samsung.Cantidad = 32;
+
+                        samsung.ModeloCelular = "Samsung Galaxy S10";
+                        samsung.Precio = 890;
+                        samsung.Cantidad = 28;
+
+                        samsung.ModeloCelular = "Samsung Galaxy s10+";
+                        samsung.Precio = 920;
+                        samsung.Cantidad = 54;
+
+
                         Celulares motorola = new Celulares();
-                        motorola.ModeloCelular = "Motorola G2";
+                        motorola.ModeloCelular = "Motorola Moto Tab G20";
                         motorola.Precio = 260;
                         motorola.Cantidad = 20;
+
+                        motorola.ModeloCelular = "Motorola Moto G51";
+                        motorola.Precio = 380;
+                        motorola.Cantidad = 10;
+
+                        motorola.ModeloCelular = "Motorola Moto G51";
+                        motorola.Precio = 500;
+                        motorola.Cantidad = 13
+                            ;
+                        motorola.ModeloCelular = "Motorola Moto E30";
+                        motorola.Precio = 300;
+                        motorola.Cantidad = 34;
+
+                        motorola.ModeloCelular = "Motorola Moto E40";
+                        motorola.Precio = 250;
+                        motorola.Cantidad = 15;
+
+                        Celulares realme = new Celulares();
+                        realme.ModeloCelular = "Realme 7";
+                        realme.Precio = 280;
+                        realme.Cantidad = 50;
+                        Celulares realme1 = new Celulares();
+                        realme.ModeloCelular = "Realme 7 pro";
+                        realme.Precio = 320;
+                        realme.Cantidad = 12;
+                        Celulares realme2 = new Celulares();
+                        realme.ModeloCelular = "Realme 8";
+                        realme.Precio = 355;
+                        realme.Cantidad = 50;
+
                         Celulares xiaomi = new Celulares();
                         xiaomi.ModeloCelular = "Xiaomi Note 10";
                         xiaomi.Precio = 950;
-                        xiaomi.Cantidad = 45;
+                        xiaomi.Cantidad = 90;
+
                         List<Celulares> ListaCelulares = new List<Celulares>();
                         ListaCelulares.Add(iphone);
                         ListaCelulares.Add(samsung);
                         ListaCelulares.Add(xiaomi);
                         ListaCelulares.Add(motorola);
+                        ListaCelulares.Add(realme);
                         //IMPRESION DE LA LISTA DE CELULARES QUE TIENEN HERENCIA DE INVENTARIO
                         Console.WriteLine("MODELOS DE CELULARES");
                         foreach (Celulares item in ListaCelulares)
                         {
-                            Console.WriteLine(item.ModeloCelular + "\n" + "Con un valor de:" + item.Precio + "\n" + "Hay un catidad de:" + item.Cantidad + " telefonos");
+                            Console.WriteLine(item.ModeloCelular + "\n" + "Con un valor de:" + item.Precio + "\n" + "Hay una catidad de:" + item.Cantidad + " telefonos");
                         }
                     }
                     else if (num2 == 2)
@@ -114,6 +182,8 @@ namespace ProyectoSegundaEtapa
                             Console.WriteLine(item.ModeloTelevisores + "\n" + "Con un valor de:" + item.Precio + "\n" + "Hay un catidad de:" + item.Cantidad + " televisores");
                         }
                     }
+                    else
+                        Console.WriteLine("programa finalizado.");
 
                     break;
                 default:
@@ -214,5 +284,6 @@ namespace ProyectoSegundaEtapa
                 {
                     Console.WriteLine(item.ModeloCelular+"\n"+ "Con un valor de:"+item.Precio+"\n"+ "Hay un catidad de:" +item.Cantidad+" telefonos");
                 }
+
 
             }*/
