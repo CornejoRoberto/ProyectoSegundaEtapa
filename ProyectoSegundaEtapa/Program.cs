@@ -99,7 +99,7 @@ namespace ProyectoSegundaEtapa
         {
             string respuesta = "";
             int compara = 0;
-            Console.WriteLine("¿Es correcto su nombre de usuario? \nSi/No ");
+            Console.WriteLine("¿Es correcta su contraseña? \nSi/No ");
             respuesta = Console.ReadLine();
             compara = string.Compare(respuesta, "si", true);
 
