@@ -131,7 +131,6 @@ namespace ProyectoSegundaEtapa
                     Console.WriteLine("******Se ingresó un valor incorrecto. Ingrese nuevamente******\n*");
                     seleccion = 0;
                 }
-
             } while (seleccion != 1 && seleccion != 2 && seleccion != 3);
 
             switch (seleccion)
