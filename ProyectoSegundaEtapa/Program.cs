@@ -10,7 +10,10 @@ namespace ProyectoSegundaEtapa
 
             string confirmar = "";
             int comparar = 0;
-            do
+            
+            
+            
+          do
             {
                 Console.WriteLine("----BIENVENIDO A SPRITH INDUSTRRY'S----\n");
                         Console.WriteLine("Ingrese los siguientes datos para la creación de su cuenta de usuario: \n");
@@ -25,7 +28,7 @@ namespace ProyectoSegundaEtapa
                 Console.WriteLine("Saliendo del sistema");
                 Console.WriteLine("¿Deea acceder nuevamente? \nSi/No ");
                 confirmar = Console.ReadLine();
-                comparar = string.Compare(confirmar, "no", true);
+                comparar = string.Compare(confirmar, "no", true); 
             } while (comparar!=0);
         }
 
@@ -53,7 +56,7 @@ namespace ProyectoSegundaEtapa
             Contraseña = VerificarContraseña(Contraseña);
             return Contraseña;
         }
-
+        
         private static string VerificarUsuario (string Usuario)
         {
             string respuesta = "";
