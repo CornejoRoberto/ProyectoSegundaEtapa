@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace ProyectoSegundaEtapa
+namespace Pruebas_u_y_proyecto_xd
 {
-    //RECIBE HERENCIA DEL INVENTARIO
-    class Televisores:Inventario
+    class Televisores 
     {
-        public string ModeloTelevisores { get; set; }
         public Televisores()
         {
+
         }
+        public string ModeloTelevisores { get; set; }
+        public double PrecioTelevisores { get; set; }
+        public int CantidadTelevisores { get; set; }
+
     }
 }
