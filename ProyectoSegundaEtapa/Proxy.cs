@@ -9,11 +9,12 @@ namespace ProyectoSegundaEtapa
         public Proxy()
         {
         }
-
+        //CREAMOS LA INTERFAZ PRIVADA PARA LA CREACIÓN DEL PROXY
         public interface Privado
         {
             void Peticion(int peti);
         }
+        //ENCADENAMOS NUESTRAS CLASES
         public class ProxySeguro: Privado
         {
             private CPrivado nombre;
@@ -21,6 +22,7 @@ namespace ProyectoSegundaEtapa
             {
                 string password;
                 password = Console.ReadLine();
+                //DECLARAMOS NUESTRA CONTRASEÑA DE USUARIO POR LA CUAL PODREMOS TENER ACCESO AL PROXY
                 if (password == "admin123")
                 {
                     if (nombre == null)
@@ -39,11 +41,12 @@ namespace ProyectoSegundaEtapa
             }
 
         }
+        //NUESTRA CLASE PRIVADA QUE SOLO SERÁ ACCESIBLE MEDIANTE EL PROXY
         private class CPrivado
         {
             public void NombreSecreto()
             {
-                Console.WriteLine("LAS GANANCIAS PRIVADAS DEL MES DE DICIEMBRE SON : ");
+                Console.WriteLine("LAS GANANCIAS PRIVADAS DEL MES DE DICIEMBRE SON :");
                 Console.WriteLine("\n");
                 Console.WriteLine("CAMARAS: $8,976");
                 Console.WriteLine("CELULARES: $10,987");

@@ -18,9 +18,11 @@ namespace Pruebas_u_y_proyecto_xd
             Console.WriteLine("----BIENVENIDO A SPRITH INDUSTRRY'S----\n");
             Console.WriteLine("SI DESEA ENTRAR EN MODO EMPRESA SELECCIONE 1, SI DESEA INGRESAR EN MODO CLIENTE SELECCIONE 2");
             entrada = int.Parse(Console.ReadLine());
+            //ENTRADA AL MODO EMPRESA MEDIANTE AL PROXY
             if (entrada == 1)
             {
                 Console.WriteLine("Ingrese su contraseña de empresa");
+                //EJECUTAMOS NUESTRO PROXY PARA ENTRAR A LA BASE DE DATOS PRIVADA DE LA EMPRESA
                 Proxy.Privado privado = new Proxy.ProxySeguro();
                 privado.Peticion(1);
             }
